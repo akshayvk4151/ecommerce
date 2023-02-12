@@ -1,0 +1,28 @@
+.card {
+    width: 22rem;
+    margin-top: 40px;
+    height: 234px;
+
+}
+
+.card-body img {
+    width: 130px;
+    margin-left: 5px;
+}
+
+.card-body {
+    text-align: center;
+    /* align-items: center; */
+}
+
+
+.card-body a {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    width: 70px;
+    border-radius: 10px;
+}

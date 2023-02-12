@@ -1,0 +1,71 @@
+{% extends 'admin_app_templates/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style_approve.css' %}">
+{% endblock %}
+
+{% block title %}hello{% endblock %}
+{% block content %}
+
+<!-- header -->
+<section id="header">
+    <div class="heading">
+        <h1>Approve Seller</h1>
+    </div>
+    <div class="table_responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Seller pic</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>AccHolder</th>
+                    <th>Branch</th>
+                    <th>IFSC</th>
+                    <th>Acc.No</th>
+                    <th>Approve</th>
+                    <th>Reject</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for seller in sellers_list %}
+                <form method="POST" >
+                    {% csrf_token %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td><img src="{{ seller.image.url}}" alt=""></td>
+                        <td>{{ seller.seller_name }}</td>
+                        <td>{{ seller.email }}</td>
+
+                        <td>{{ seller.phone }}</td>
+                        <td>{{ seller.address }}</td>
+                        <td>{{ seller.holder_name }}</td>
+                        <td>{{ seller.branch }}</td>
+                        <td>{{ seller.ifsc }}</td>
+                        <td>{{ seller.account_number }}</td>
+                        <td><button class="btn btn-success" name = 'approve' type="submit">Approve</button></td>
+                        <td><button class="btn btn-danger" name = 'reject' type="submit">Reject</button></td>
+                        <td><input type="hidden" name="seller_id" value={{seller.id}}></td>
+
+                    </tr>
+
+                </form>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+</section>
+
+
+<!-- footer -->
+
+{% endblock %}

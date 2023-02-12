@@ -1,0 +1,58 @@
+{% extends 'admin_app_templates/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style_customer_details.css' %}">
+{% endblock %}
+
+{% block title %}hello{% endblock %}
+{% block content %}
+
+<!-- header -->
+<section id="header">
+    <div class="heading">
+        <h1>Customer Details</h1>
+    </div>
+    <div class="table_responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl.No</th>
+
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Password</th>
+
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <form method="POST">
+                    {% csrf_token %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ customer.seller_name }}</td>
+                        <td>{{ customer.email }}</td>
+                        <td>{{ customer.address }}</td>
+                        <td>{{ customer.phone }}</td>
+                        <td>{{ customer.gender }}</td>
+                        <td>{{ customer.password }}</td>
+                    </tr>
+
+                </form>
+            </tbody>
+        </table>
+    </div>
+
+
+</section>
+
+
+<!-- footer -->
+
+{% endblock %}

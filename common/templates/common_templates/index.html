@@ -1,0 +1,48 @@
+{% extends 'common_templates/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style_index.css' %}">
+{% endblock %}
+
+{% block title %}hello{% endblock %}
+{% block content %}
+
+
+<section id="banner_image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="banner">
+                    <img src="{% static 'images/banner.jpg' %}" class="img-fluid" alt="" class="profile-img">
+
+                    <div class="inner">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-12" style="margin-bottom: -62px;">
+                                    <div id="twoButtons">
+                                        <a href="{% url 'common:customer_login' %}" style="text-decoration: none;"><button
+                                                class="firstBtn firstButton">CUSTOMER</button></a>
+                                        <a href="{% url 'common:seller_login' %}" style="text-decoration: none;"><button class="firstBtn secondBtn">SELLER</button></a>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- footer -->
+
+{% endblock %}

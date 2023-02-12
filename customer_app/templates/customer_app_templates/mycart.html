@@ -1,0 +1,49 @@
+{% extends 'customer_app_templates/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/mycart.css' %}">
+{% endblock %}
+
+{% block title %}product_details{% endblock %}
+{% block content %}
+
+<section style="margin-top: 128px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="mycart">My Cart <span><img src="{% static 'images/checkout.png' %}" alt=""></span></h1>
+                
+
+                <div class="table-responsive-lg">
+                    <table class="table">
+                        <tr class="head">
+                            <th>Sl.No</th>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr class="content">
+                            <td>1</td>
+                            <td><img src="{% static 'images/banner.jpg' %}" alt=""
+                                    style="    width: 80px;border-radius: 10px;border: 3px solid white;"></td>
+                            <td>Akshay</td>
+                            <td>500</td>
+                            <td><input type="number" value="number"></td>
+                            <td>1995</td>
+                            <td><button type="button">Remove</button></td>
+                        </tr>
+
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

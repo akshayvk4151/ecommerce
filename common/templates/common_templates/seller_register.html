@@ -1,0 +1,112 @@
+{% extends 'common_templates/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style_seller_register.css' %}">
+{% endblock %}
+
+{% block title %}hello{% endblock %}
+{% block content %}
+
+<section id="main_body">
+
+
+    <div class="heading" style="padding-top: 66px;">
+        <h1 class="heading_text text-center mb-2"><u>SELLER REGISTRATION</u> </h1>
+    </div>
+
+
+    <section id="reg_form">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
+                    <div class="card" style="box-shadow: 12px 12px 22px;">
+                        <div class="card-header">
+                            <h5 class="card-title">Register</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="">Name</label>
+                                    <input type="text" name="seller_name" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" name='email' class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Address</label><br>
+                                    <textarea style="font-size: 20px;" name="address" name="remark" id="" cols="30"
+                                        rows="4" placeholder="Write here..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Phone Number</label>
+                                    <input type="number" name="phone" pattern="\d*" class="form-control" />
+                                </div>
+                                <div class="form-group">
+
+                                    <label for="">Gender </label> <br>
+                                    &nbsp;
+                                    <input type="radio" name="gender" value="male" />Male
+                                    &nbsp;
+                                    <input type="radio" name="gender" value="female" />Female
+                                    &nbsp;
+                                    <input type="radio" name="gender" value="others" />Others
+
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Company Name</label>
+                                    <input type="text" name='company_name' placeholder="Company Name"
+                                        class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Account Holder Name</label>
+                                    <input type="text" name="holder_name" placeholder="Account Holder Name"
+                                        class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">IFSC</label>
+                                    <input type="text" name="ifsc" placeholder="IFSC NO" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Branch</label>
+                                    <input type="text" name="branch" placeholder="Bank Branch" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Account Number</label>
+                                    <input type="number" name="account_number" placeholder="Account Number"
+                                        class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Seller image</label>
+                                    <input type="file" value="image" name="image" class="form-control" />
+                                </div>
+
+
+
+                                <button class="btn btn-outline-success form-control mt-3" id="btnColor">
+                                    Register
+                                </button>
+                            </form>
+                            <br>
+                            <p class="text-left" style="font-size:15px">If you already have an account, <a
+                                    href="{% url 'common:seller_login' %}">login</a> instead.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+
+
+
+
+<!-- footer -->
+
+{% endblock %}

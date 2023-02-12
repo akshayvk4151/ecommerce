@@ -1,0 +1,88 @@
+{% extends 'common_templates/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/style_customer_register.css' %}">
+{% endblock %}
+
+{% block title %}hello{% endblock %}
+{% block content %}
+
+<section id="main_body">
+
+
+    <div class="heading" style="padding-top: 66px;">
+        <h1 class="heading_text text-center mb-2"><u>CUSTOMER REGISTRATION</u> </h1>
+    </div>
+
+
+    <section id="reg_form">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
+                    <div class="card" style="box-shadow: 12px 12px 22px;">
+                        <div class="card-header">
+                            <h5 class="card-title">Register</h5>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="">Name</label>
+                                    <input type="text" name="customer_name" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" name='email' class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Address</label><br>
+                                    <textarea style="font-size: 20px;" name="address" name="remark" id="" cols="30"
+                                        rows="4" placeholder="Write here..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Phone Number</label>
+                                    <input type="number" pattern="\d*" name="phone" class="form-control" />
+                                </div>
+                                <div class="form-group">
+
+                                    <label for="">Gender </label> <br>
+                                    &nbsp;
+                                    <input type="radio" name="gender" value="male" />Male
+                                    &nbsp;
+                                    <input type="radio" name="gender" value="female" />Female
+                                    &nbsp;
+                                    <input type="radio" name="gender" value="others" />Others
+
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Password</label>
+                                    <input type="password" name='password' class="form-control" />
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-success form-control mt-3" id="btnColor">
+                                    Register
+                                </button>
+                            </form>
+                            <br>
+                            <p class="text-left" style="font-size:15px">If you already have an account,
+                                <a href="{% url 'common:customer_login' %}">login</a> instead.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+
+
+
+
+<!-- footer -->
+
+{% endblock %}

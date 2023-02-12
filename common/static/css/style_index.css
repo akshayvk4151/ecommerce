@@ -1,0 +1,105 @@
+.links {
+    height: 60px;
+    background-color: gray;
+}
+
+.links .customer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    height: 700px;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: -48px;
+    filter: brightness(50%);
+}
+
+.img-fluid {
+    height: 700px
+}
+
+
+.banner_image .twoButtons {
+    display: flex;
+    justify-content: center;
+
+}
+
+#twoButtons {
+    margin-left: -187px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+
+}
+
+.firstBtn {
+    font-size: 40px;
+    font-weight: 600;
+    font-style: inherit;
+    border-radius: 25px;
+    background-color: blue;
+    border: 0px;
+    color: #fff;
+    margin-left: 164px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 350px;
+    text-decoration: none;
+}
+
+.secondBtn:hover {
+    background: rgb(0, 0, 97);
+    transition: 0.5s;
+
+}
+
+.firstButton:hover {
+    background: rgb(0, 0, 97);
+    transition: 0.5s;
+}
+
+.secondBtn {
+    width: 200px;
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width:660px) {
+    .firstBtn {
+        /* font-size: 17px; */
+        /* font-size: 28px; */
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .secondBtn {
+        width: 131px;
+    }
+
+    #twoButtons {
+        bottom: -109px;
+        margin-left: -12px;
+        /* font-size: 20px;
+        margin-left: -16px;
+        bottom: 229px; */
+
+    }
+
+    .img-fluid {
+        height: 500px;
+    }
+
+
+}

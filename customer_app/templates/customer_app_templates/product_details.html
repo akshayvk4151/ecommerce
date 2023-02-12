@@ -1,0 +1,80 @@
+{% extends 'customer_app_templates/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/product_details.css' %}">
+{% endblock %}
+
+{% block title %}product_details{% endblock %}
+{% block content %}
+
+<div class="heading">
+    <h5>Product Details <hr></h5>
+    
+</div>
+<!-- <section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="{% static 'image/png-clipart-web-development-e-commerce-magento-business-online-shopping-web-banner-web-design-company.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section> -->
+<section style="margin-top: 116px;">
+    <div class="container">
+        <div class="row gy-3 my-3" style="    margin-top: 220px;">
+            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                <div class="card text-center">
+                    <img src="{% static 'images/banner.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Seller : Jango</p>
+                        <p class="price text-danger">Price</p>
+                        <a href="#" class="btn btn-danger">Add to Cart<span><img style="width: 29px;height: 26px;" src="{% static 'images/checkout.png' %}" alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                <div class="card text-center">
+                    <img src="{% static 'images/banner.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Seller : Jango</p>
+                        <p class="price text-danger">Price</p>
+                        <a href="#" class="btn btn-danger">Add to Cart<span><img style="width: 29px;height: 26px;" src="{% static 'images/checkout.png' %}" alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                <div class="card text-center">
+                    <img src="{% static 'images/banner.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Seller : Jango</p>
+                        <p class="price text-danger">Price</p>
+                        <a href="#" class="btn btn-danger">Add to Cart<span><img style="width: 29px;height: 26px;" src="{% static 'images/checkout.png' %}" alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                <div class="card text-center">
+                    <img src="{% static 'images/banner.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Seller : Jango</p>
+                        <p class="price text-danger">Price</p>
+                        <a href="#" class="btn btn-danger">Add to Cart <span><img style="width: 29px;height: 26px;" src="{% static 'images/checkout.png' %}" alt=""></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
